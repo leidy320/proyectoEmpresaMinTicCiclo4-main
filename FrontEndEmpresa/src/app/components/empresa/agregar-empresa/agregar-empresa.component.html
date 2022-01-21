@@ -1,0 +1,25 @@
+<div class="container">
+    <form class="custom-form" [formGroup]="agrEmpValidador">
+        <h1>Agregar empresa</h1>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <div class="form-group">
+                    <label for="nit">NIT</label>
+                    <input [(ngModel)]="nit" formControlName="nit" type="text" class="form-control" id="nit" aria-describedby="nitAyuda" placeholder="Ingrese el nit" required>
+                    <small id="nitAyuda" class="form-text text-muted"></small>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-7">
+                <div class="form-group">
+                    <label for="razonSocial">Razón social</label>
+                    <input [(ngModel)]="razonSocial" formControlName="razonSocial" type="text" class="form-control" id="razonSocial" aria-describedby="razonSocialAyuda" placeholder="Ingrese la razón social" required="required">
+                    <small id="razonSocialAyuda" class="form-text text-muted"></small>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <button class="btn btn-success active" [disabled]="!agrEmpValidador.valid" aria-pressed="true" (click)="agregar_empresa()">Agregar empresa</button>
+        </div>
+    </form>
+</div>

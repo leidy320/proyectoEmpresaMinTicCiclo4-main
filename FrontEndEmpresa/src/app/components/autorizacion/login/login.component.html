@@ -1,0 +1,8 @@
+<div class="login">
+    <form class="custom-form" [formGroup]="fgValidador">
+        <h1>Iniciar sesion</h1>
+        <input type="email" formControlName="email" name="email" placeholder="Email" required="required" />
+        <input type="password" formControlName="password" name="password" placeholder="Password" required="required" />
+        <button type="button" [disabled]="!fgValidador.valid"  (click)="login()">Iniciar sesión</button>
+    </form>
+</div>

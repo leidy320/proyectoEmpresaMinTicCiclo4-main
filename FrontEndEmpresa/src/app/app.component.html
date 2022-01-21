@@ -1,0 +1,29 @@
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <h1 class="text-center">Bienvenido</h1>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+      <button class="btn btn-success">Ingreso al sistema</button>
+      <button class="btn btn-primary">Registro</button>
+    </div>
+  </div>
+</div>
+-->
+<div *ngIf="sesionIniciada">
+  <app-header></app-header>
+  <div *ngIf="rol == 'Empleado' ">
+    <app-menu-empleado></app-menu-empleado>
+  </div>
+  <div *ngIf="rol == 'Cliente' ">
+    <app-menu-cliente></app-menu-cliente>
+  </div>
+  <div class="contenido-componentes">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="!sesionIniciada">
+  <app-login-registro></app-login-registro>
+</div>
+<app-footer></app-footer>

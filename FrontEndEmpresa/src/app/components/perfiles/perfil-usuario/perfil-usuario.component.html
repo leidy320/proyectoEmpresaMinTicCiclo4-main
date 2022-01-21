@@ -1,0 +1,9 @@
+<div class="perfil-usuario-empresa">
+    <h1>Bienvenido {{nombreUsuario}}</h1>
+    <div *ngIf="rol == 'Empleado' ">
+        <app-perfil-empleado></app-perfil-empleado>
+    </div>
+    <div *ngIf="rol == 'Cliente' ">
+        <app-perfil-cliente></app-perfil-cliente>
+    </div>
+</div>

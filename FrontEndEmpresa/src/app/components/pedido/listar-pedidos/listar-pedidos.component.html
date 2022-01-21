@@ -1,0 +1,31 @@
+<div class="text-center container">
+    <h4>Pedidos</h4>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Fecha de creación</th>
+                <th>Vaor Total</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listaPedidos">
+                <td>
+                    {{p.id}}
+                </td>
+                <td>
+                    {{p.fechaCreacion}}
+                </td>
+                <td>
+                    {{p.valorTotal}}
+                </td>
+                <td>
+                    <button class="btn btn-light" routerLink="/listar-productos-pedido/{{p.id}}">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

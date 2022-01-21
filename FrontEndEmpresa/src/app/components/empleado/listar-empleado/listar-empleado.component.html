@@ -1,0 +1,63 @@
+<div class="text-center container border">
+    <h4>Empleados</h4>
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>Fecha nacimiento</th>
+                <th>Sueldo</th>
+                <th>Es directivo</th>
+                <th>Razon social</th>
+                <th>Empresa id</th>
+                <th>Detalles</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr *ngFor="let p of listaEmpleados">
+                <td>
+                    {{p.nombres}}
+                </td>
+                <td>
+                    {{p.apellidos}}
+                </td>
+                <td>
+                    {{p.direccion}}
+                </td>
+                <td>
+                    {{p.email}}
+                </td>
+                <td>
+                    {{p.fechaNacimiento}}
+                </td>
+                <td>
+                    {{p.sueldo}}
+                </td>
+                <td>
+                    {{p.esDirectivo}}
+                </td>
+                <td>
+                    {{p.razonSocial}}
+                </td>
+                <td>
+                    {{p.empresaId}}
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-primary" routerLink="/detalles-empleado/{{p.id}}">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-warning" routerLink="/editar-empleado/{{p.id}}">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-danger" type="submit" (click)="EliminarEmpleado(p.id!)">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+        </table>
+</div>

@@ -1,0 +1,46 @@
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Agregar Pedido</h2>
+  </div>
+  <br>
+  <div class="container border text-center">
+    <form [formGroup]="fgValidador">
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label for="fecha">Fecha</label>
+                <input name="fecha" type="text" formControlName="fecha" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="valor">Valor total</label>
+                <input name="valor" type="text" formControlName="valor" class="form-control">
+            </div>
+        </div>
+        <div class="row"><br></div>
+        <div class="form-row row border">
+            <div class="form-group col-md-2 text-center">
+                <h3>producto</h3>
+            </div>
+            <div class="form-group col-md-3 text-center">
+                <select id="productos" class="form-control">
+                    <option *ngFor="let p of listaProductos">{{p.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2 text-center">
+                <h3>cantidad</h3>
+            </div>
+            <div class="form-group col-md-3 text-center">
+                <input id="cantidad" formControlName="@Model.TextoFiltro" type="number" class="form-control">
+            </div>
+            <div class="form-group col-md-2 text-center">
+                <!--<input type="submit" value="Filtrar" class="btn btn-primary">-->
+                <button id="botonFiltro" type="submit" class="btn btn-primary">
+                    Agregar producto
+                </button> 
+            </div>
+        </div>
+        <br>
+        
+        <div>
+            <button [disabled]="!fgValidador.valid" type="submit" (click)="Agregar()" class="btn btn-success">Agregar Pedido</button>
+        </div>
+    </form>
+  </div>

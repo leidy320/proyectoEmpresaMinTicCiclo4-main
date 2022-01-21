@@ -1,0 +1,30 @@
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Detalles del Producto</h2>
+</div>
+<br>
+<div class="container border text-center">
+        <table class="table">
+        <tr>
+            <th colspan="2">
+                Datos del producto
+            </th>
+        </tr>
+        <tr>
+            <th>Nombre:</th>
+            <td>{{producto.nombre}}</td>
+        </tr>
+        <tr>
+            <th>Valor unitario:</th>
+            <td>{{producto.valorUnitario}}</td>
+        </tr>
+        <tr>
+            <th>Descripción:</th>
+            <td>{{producto.descripcion}}</td>
+        </tr>
+    </table>
+    <div>
+        <a class="btn btn-primary table-btn" routerLink="/listar-producto">
+            Volver
+        </a>
+    </div>
+</div>

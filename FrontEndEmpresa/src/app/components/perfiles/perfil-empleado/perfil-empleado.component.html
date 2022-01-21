@@ -1,0 +1,94 @@
+<div class="border cuadro-perfil">
+    <div class="row">
+        <div class="col">
+            <div class="border cuadro-perfil">
+                <form [formGroup]="fgValidador">
+                    <div class="row">
+                        <h4>Mis Datos</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="nombres">Mis nombres</label>
+                            <input name="nombres" type="text" formControlName="nombres" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="apellidos">Mis apellidos</label>
+                            <input name="apellidos" type="text" formControlName="apellidos" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="direccion">Mi dirección</label>
+                            <input name="direccion" type="text" formControlName="direccion" class="form-control">
+                        </div>
+                        <div class="col">
+                            <label for="correo">Mi correo electronico</label>
+                            <input name="correo" type="text" formControlName="correo" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="fechaNacimiento">Mi fecha de nacimiento</label>
+                            <input name="fechaNacimiento" type="datetime-local" formControlName="fechaNacimiento"
+                                class="form-control" max="System.DateTime.Now">
+                        </div>
+                        <div class="col">
+                            <label for="telefono">Mi telefono</label>
+                            <input name="telefono" type="text" formControlName="telefono" class="form-control">
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="sueldo">Mi sueldo</label>
+                            <input name="sueldo" type="number" formControlName="sueldo" class="form-control">
+                        </div>
+                        <div class="col">
+                            <div class="col">
+                                <label for="esDir">Empleado directivo</label>
+                                <input name="esDir" type="checkbox" formControlName="esDir" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"><br></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row" *ngIf="!editar">
+                                <button type="submit" (click)="Editar()" class="btn btn-primary table-btn">Editar Datos</button>
+                            </div>
+                            <div class="row text-center" *ngIf="editar">
+                                <div class="col">
+                                    <button [disabled]="!fgValidador.valid" type="submit" (click)="GuardarCambios()" class="btn btn-success">Guardar Cambios</button>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" (click)="CancelarEditar()" class="btn btn-danger">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row border cuadro-perfil">
+                <!--cambiar contraseña y mis mensajes-->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="inicio-tab" data-bs-toggle="tab" data-bs-target="#cambiar-clave" type="button" role="tab" aria-controls="inicio" aria-selected="true">Cambiar contraseña</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="reg-tab" data-bs-toggle="tab" data-bs-target="#msg" type="button" role="tab" aria-controls="reg" aria-selected="false">Mis mensajes</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="cambiar-clave" role="tabpanel" aria-labelledby="inicio-tab">
+                        <app-cambiar-clave></app-cambiar-clave> 
+                    </div>
+                    <div class="tab-pane fade" id="msg" role="tabpanel" aria-labelledby="reg-tab">
+                        <app-mensajes-usuario></app-mensajes-usuario>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="login-registro contenedor-log-reg">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="inicio-tab" data-bs-toggle="tab" data-bs-target="#inicio" type="button" role="tab" aria-controls="inicio" aria-selected="true">Login</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="reg-tab" data-bs-toggle="tab" data-bs-target="#reg" type="button" role="tab" aria-controls="reg" aria-selected="false">Registro</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">
+            <app-login></app-login>
+        </div>
+        <div class="tab-pane fade" id="reg" role="tabpanel" aria-labelledby="reg-tab">
+            <app-registro></app-registro>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="text-center container">
+    <h4>Productos del pedido</h4>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre de producto</th>
+                <th>Valor unitario</th>
+                <th>Cantidad</th>
+                <th>Valor total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listaProductosDePedido">
+                <td>
+                    {{ObtenerNombreProducto(p.productoId!)}}
+                </td>
+                <td>
+                    {{ObtenerValorProducto(p.productoId!)}}
+                </td>
+                <td>
+                    {{p.cantidad}}
+                </td>
+                <td>
+                    {{ObtenerValorProducto(p.productoId!)*p.cantidad!}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div>
+        <a class="btn btn-primary table-btn" routerLink="/listar-pedidos">
+            Volver
+        </a>
+    </div>
+</div>

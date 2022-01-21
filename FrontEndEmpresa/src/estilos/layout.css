@@ -1,0 +1,213 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+p{
+  padding-top: 10px;
+  font-weight: bold;
+  color: #11101d;
+}
+a{
+  padding-top: 10px;
+  font-weight: bold;
+  color: #252344;
+}
+a:hover{
+  color: #322f5c;
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+.encabezado{
+    background-color: #1d1b31;
+    color: #E4E9F7;
+    width: 100%;
+    text-align: center;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.encabezado h1{
+    width: 100%;
+    text-shadow: #cfcfcf;
+    font-weight: bolder;
+    margin: 10px;
+    padding-right: 20px;
+}
+.perfil-usuario-empresa h1{
+  width: 100%;
+  font-weight: bolder;
+  color: #1d1b31;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.encabezado h4{
+    text-shadow: #cfcfcf;
+    font-weight: bolder;
+}
+.tiulo-dash h1{
+  font-weight: bolder;
+  color:#11101d;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.pie{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:#11101D;
+    color: #E4E9F7;
+}
+.pie h5{
+    width: 100%;
+    text-align: center;
+    text-shadow: #cfcfcf;
+    font-weight: bolder;
+}
+.table{
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    border:#25233f;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.table th{
+    background-color: #1d1b31;
+    color: #cfcfcf;
+}
+.home-section h2{
+    font-weight: bolder;
+    color: #1d1b31;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.texto-confirmacion h2{
+  font-weight: bolder;
+  color: #1ebd08;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.home-section h5{
+    font-weight: bolder;
+    color: #1d1b31;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.home-section h3{
+  font-weight: bolder;
+  color: #1d1b31;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+form{
+    padding: 10px;
+    font-weight: bold;
+}
+form .btn{
+    font-weight: bold;
+}
+.btn-primary{
+  background-color: #25233f;
+}
+.btn-primary:hover{
+  background-color: #3d3a68;
+}
+.home-section input{
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.home-section select{
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.home-section .border{
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contenedor-filtro{
+  background-color: rgb(240, 240, 240);
+}
+.boton-agregar{
+  height: 100%;
+  font-size: 200%;
+  align-items: center;
+  text-shadow: #7e7e7e;
+  box-shadow: #505050;
+}
+.contenedor-btn-agregar{
+  text-align: right;
+}
+.boton-agregar .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% - 250px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.boton-agregar:hover .tooltip{
+  color: #11101D;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-danger{
+  background-color: #a70000;
+}
+.btn-danger:hover{
+  background-color: #ce0000;
+}
+.btn-success{
+  background-color:green;
+}
+.btn-success:hover{
+  background-color:rgb(0, 153, 0);
+}
+.btn-warning{
+  background-color:rgb(255, 230, 5);
+  color:#25233f
+}
+.btn-warning:hover{
+  background-color:rgb(255, 233, 37);
+  color:#757575
+}
+input[type=checkbox], input[type=radio] {
+  box-shadow: none;
+}
+.contenedor-header table{
+  width: 100vw;
+}
+.contenedor-header td{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.encabezado h4 .logo-app{
+  color: rgb(60, 255, 0);
+  text-shadow: #aeb5fa;
+  font-weight: bolder;
+}
+.contenido-componentes{
+  height: 100%;
+}
+.cuadro-perfil{
+  padding: 30px;
+  border-radius: 10;
+}
+.border h4{
+  font-weight: bolder;
+  color: #18065a;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}

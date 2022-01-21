@@ -1,0 +1,47 @@
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Detalles del Cliente</h2>
+</div>
+<br>
+<div class="container border text-center">
+        <table class="table">
+        <tr>
+            <th colspan="2">
+                Datos del cliente
+            </th>
+        </tr>
+        
+        <tr>
+            <th>Nombres:</th>
+            <td>{{cliente.nombres}}</td>
+        </tr>
+        <tr>
+            <th>Apellidos:</th>
+            <td>{{cliente.apellidos}}</td>
+        </tr>
+        <tr>
+            <th>Telefono:</th>
+            <td>{{cliente.telefono}}</td>
+        </tr>
+        <tr>
+            <th>Direccion:</th>
+            <td>{{cliente.direccion}}</td>
+        </tr>
+        <tr>
+            <th>E-mail:</th>
+            <td>{{cliente.email}}</td>
+        </tr>
+        <tr>
+            <th>Fecha de nacimiento:</th>
+            <td>{{cliente.fechaNacimiento}}</td>
+        </tr>
+        <tr>
+            <th>Empresa:</th>
+            <td>{{cliente.empresaId}}</td>
+        </tr>
+    </table>
+    <div>
+        <a class="btn btn-primary table-btn" routerLink="/listar-cliente">
+            Volver
+        </a>
+    </div>
+</div>

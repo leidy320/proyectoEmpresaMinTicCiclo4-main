@@ -1,0 +1,23 @@
+<header>
+    <nav class="navbar encabezado">
+        <div class="contenedor-header">
+            <table>
+                <tr>
+                    <td>
+                        <h4>
+                            <div class="logo-app">
+                                <i class='bx bxs-business'></i> APP EMPRESA
+                            </div>
+                        </h4>
+                    </td>
+                    <td><h4>Usuario: {{usuario}}</h4></td>
+                    <td><h4>Rol: {{rol}}</h4></td>
+                    <td>
+                        <button type="submit" (click)="logout()" class="btn btn-danger table-btn">Cerrar sesión</button>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+    </nav>
+</header>

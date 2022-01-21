@@ -1,0 +1,55 @@
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Agregar Empleado</h2>
+</div>
+<br>
+<div class="container border text-center">
+    <form [formGroup]="EmpleValidador">
+        
+            <div class="form-row row">
+                <div class="form-group col-md-4">
+                    <label for="nombres">Nombre</label>
+                    <input name="nombres" type="text"  formControlName="nombres" class="form-control" placeholder="Nombres del empleado">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="apellidos">Apellidos</label>
+                    <input name="apellidos" type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="telefono">Telefono</label>
+                    <input name="telefono" type="text" formControlName="telefono" class="form-control" placeholder="Telefono">
+                </div>
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-4">
+                    <label for="direccion">Dirección</label>
+                    <input name="direccion" type="text" formControlName="direccion" class="form-control" placeholder="Dirección">
+                </div>
+                <div class="md-form col-md-4 md-outline input-with-post-icon datepicker">
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input name="fechaNacimiento" type="datetime-local" formControlName="fechaNacimiento" placeholder="Selecciona la fecha de nacimiento"
+                        class="form-control" max="System.DateTime.Now">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="email">Correo Electronico</label>
+                    <input name="email" type="email" formControlName="email" class="form-control" placeholder="Correo Electronico">
+                </div>
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-4">
+                    <label for="sueldo">Sueldo bruto</label>
+                    <input name="sueldo" type="number" formControlName="sueldo" class="form-control" placeholder="Sueldo bruto">
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for="esDirectivo">Directivo</label>
+                    <input name="esDirectivo" type="checkbox" formControlName="esDirectivo" class="form-check-input form-control">
+                </div>
+            </div>
+            <br>
+            <div>
+                <button [disabled]="!EmpleValidador.valid" type="submit" (click)="Agregar()" class="btn btn-success">Agregar</button>
+            </div>
+        
+    </form>
+   
+</div>

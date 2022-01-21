@@ -1,0 +1,54 @@
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Detalles de empleado</h2>
+</div>
+<br>
+<div class="container border text-center">
+        <table class="table">
+        <tr>
+            <th colspan="2">
+                Datos del producto
+            </th>
+        </tr>
+        <tr>
+            <th>Nombres:</th>
+            <td>{{empleado.nombres}}</td>
+        </tr>
+        <tr>
+            <th>Apellidos:</th>
+            <td>{{empleado.apellidos}}</td>
+        </tr>
+        <tr>
+            <th>Direccion:</th>
+            <td>{{empleado.direccion}}</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>{{empleado.email}}</td>
+        </tr>
+        <tr>
+            <th>Fecha nacimiento:</th>
+            <td>{{empleado.fechaNacimiento}}</td>
+        </tr>
+        <tr>
+            <th>Sueldo:</th>
+            <td>{{empleado.sueldo}}</td>
+        </tr>
+        <tr>
+            <th>Es directivo:</th>
+            <td>{{empleado.esDirectivo}}</td>
+        </tr>
+        <tr>
+            <th>Razon social:</th>
+            <td>{{empleado.razonSocial}}</td>
+        </tr>
+        <tr>
+            <th>Empresa id:</th>
+            <td>{{empleado.empresaId}}</td>
+        </tr>
+    </table>
+    <div>
+        <a class="btn btn-primary table-btn" routerLink="/listar-empleado">
+            Volver
+        </a>
+    </div>
+</div>
